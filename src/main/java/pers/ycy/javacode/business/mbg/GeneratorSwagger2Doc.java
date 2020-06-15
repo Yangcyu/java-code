@@ -4,6 +4,7 @@ import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
 import org.mybatis.generator.api.dom.java.Field;
+import org.mybatis.generator.api.dom.java.Interface;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
 import java.util.List;
@@ -13,9 +14,10 @@ public class GeneratorSwagger2Doc extends PluginAdapter {
     public boolean validate(List<String> list) {
         return true;
     }
+
     @Override
     public boolean modelFieldGenerated(Field field, TopLevelClass topLevelClass, IntrospectedColumn introspectedColumn, IntrospectedTable introspectedTable, ModelClassType modelClassType) {
-        String classAnnotation = "@ApiModel(value=\"" + introspectedTable.getRemarks()+ "\")";
+        String classAnnotation = "@ApiModel(value=\"" + introspectedTable.getRemarks() + "\")";
         if (!topLevelClass.getAnnotations().contains(classAnnotation)) {
             topLevelClass.addAnnotation(classAnnotation);
         }
@@ -35,4 +37,5 @@ public class GeneratorSwagger2Doc extends PluginAdapter {
         field.addAnnotation("@ApiModelProperty(value=\"" + introspectedColumn.getRemarks() + "\")");
         return super.modelFieldGenerated(field, topLevelClass, introspectedColumn, introspectedTable, modelClassType);
     }
+
 }

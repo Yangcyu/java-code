@@ -92,19 +92,19 @@ public class MyCommentGenerator implements CommentGenerator {
                 method.addJavaDocLine(" *@Description  根据主键查询");
                 break;
             case "updateByPrimaryKeySelective":
-                method.addJavaDocLine(" *@Description  根据主键更新非空字段");
+                method.addJavaDocLine(" *@Description  根据主键，更新非空字段");
                 break;
             case "updateByPrimaryKey":
-                method.addJavaDocLine(" *@Description  根据值分空更新");
+                method.addJavaDocLine(" *@Description  根据字段非空更新");
                 break;
             case "queryList":
-                method.addJavaDocLine(" *@Description  根据dto查询List");
+                method.addJavaDocLine(" *@Description  根据dto查询，返回List");
                 break;
             case "insertBatchSelective":
-                method.addJavaDocLine(" *@Description   根据值分空批量插入");
+                method.addJavaDocLine(" *@Description  根据字段非空批量插入");
                 break;
             case "insertSelective":
-                method.addJavaDocLine(" *@Description   根据值分空插入");
+                method.addJavaDocLine(" *@Description  根据字段非空插入");
                 break;
         }
         method.addJavaDocLine(" */");

@@ -8,24 +8,27 @@
         <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
         <!--SerializablePlugin-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
-        <!-- Lombok插件 -->
+        <!--Lombok插件-->
         <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin"/>
-        <!--swagger插件  自定义插件-->
+        <!--自定义实现swagger插件-->
         <plugin type="pers.ycy.javacode.business.mbg.GeneratorSwagger2Doc"/>
-
+        <!--自定义实现dao方法-->
         <plugin type="pers.ycy.javacode.business.mbg.customDaoAndMapper.CustomMethodPlugin"/>
-
+        <!--自定义实现dao接口注释-->
+        <plugin type="pers.ycy.javacode.business.mbg.DaoInterfaceCommentPlugin"/>
         <!-- 自定义的注释规则-->
         <commentGenerator type="pers.ycy.javacode.business.mbg.MyCommentGenerator">
             <property name="suppressDate" value="false"/>
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
+
         <!-- 数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/hsa"
                         userId="root" password="root">
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
+
 
         <!--生成entity类存放位置-->
         <javaModelGenerator targetPackage="pers.ycy.javacode.business.demo.entity" targetProject="src/main/java">
