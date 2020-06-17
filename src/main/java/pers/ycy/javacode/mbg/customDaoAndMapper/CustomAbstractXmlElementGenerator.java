@@ -1,8 +1,7 @@
-package pers.ycy.javacode.business.mbg.customDaoAndMapper;
+package pers.ycy.javacode.mbg.customDaoAndMapper;
 
 
 import org.mybatis.generator.api.IntrospectedColumn;
-import org.mybatis.generator.api.dom.OutputUtilities;
 import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.TextElement;
 import org.mybatis.generator.api.dom.xml.XmlElement;

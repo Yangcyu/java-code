@@ -1,4 +1,4 @@
-package pers.ycy.javacode.business.mbg;
+package pers.ycy.javacode.mbg;
 
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedColumn;

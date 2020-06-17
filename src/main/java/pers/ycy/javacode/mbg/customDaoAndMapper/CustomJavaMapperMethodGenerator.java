@@ -1,4 +1,4 @@
-package pers.ycy.javacode.business.mbg.customDaoAndMapper;
+package pers.ycy.javacode.mbg.customDaoAndMapper;
 
 import org.mybatis.generator.api.dom.java.*;
 import org.mybatis.generator.codegen.mybatis3.javamapper.elements.AbstractJavaMapperMethodGenerator;

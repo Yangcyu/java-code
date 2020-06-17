@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+    <context id="mybatis" targetRuntime="MyBatis3" defaultModelType="flat">
         <!--实体类toString方法-->
         <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
         <!--SerializablePlugin-->
@@ -11,18 +11,18 @@
         <!--Lombok插件-->
         <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin"/>
         <!--自定义实现swagger插件-->
-        <plugin type="pers.ycy.javacode.business.mbg.GeneratorSwagger2Doc"/>
+        <plugin type="pers.ycy.javacode.mbg.GeneratorSwagger2Doc"/>
         <!--自定义实现dao方法-->
-        <plugin type="pers.ycy.javacode.business.mbg.customDaoAndMapper.CustomMethodPlugin"/>
+        <plugin type="pers.ycy.javacode.mbg.customDaoAndMapper.CustomMethodPlugin"/>
         <!--自定义实现dao接口注释-->
-        <plugin type="pers.ycy.javacode.business.mbg.DaoInterfaceCommentPlugin"/>
+        <plugin type="pers.ycy.javacode.mbg.DaoInterfaceCommentPlugin"/>
+        <!--自定义插件-文件重命名-->
+        <plugin type="pers.ycy.javacode.mbg.FileRenamePlugin"/>
         <!-- 自定义的注释规则-->
-        <commentGenerator type="pers.ycy.javacode.business.mbg.MyCommentGenerator">
+        <commentGenerator type="pers.ycy.javacode.mbg.MyCommentGenerator">
             <property name="suppressDate" value="false"/>
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
-
-
         <!-- 数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/hsa"
                         userId="root" password="root">
