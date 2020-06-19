@@ -32,8 +32,8 @@
 
         <!--生成entity类存放位置-->
         <javaModelGenerator targetPackage="pers.ycy.javacode.business.demo.entity" targetProject="src/main/java">
-            <property name="enableSubPackages" value="true"/>
-            <property name="trimStrings" value="false"/>
+            <!--<property name="enableSubPackages" value="true"/>-->
+            <!--<property name="trimStrings" value="false"/>-->
         </javaModelGenerator>
 
         <!--生成映射文件存放位置-->

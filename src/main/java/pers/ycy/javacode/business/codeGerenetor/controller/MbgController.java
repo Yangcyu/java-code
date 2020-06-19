@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pers.ycy.javacode.business.codeGerenetor.service.impl.MbgServiceImpl;
-import pers.ycy.javacode.mbg.config.MbgUiConfigEntity;
+import pers.ycy.javacode.mbg.config.MbgUiConfigDTO;
+import pers.ycy.javacode.system.MyException;
 import pers.ycy.javacode.system.WrapperResponse;
 
 @RestController
@@ -22,12 +23,27 @@ public class MbgController {
 
     @ApiOperation(value = "mbg配置实现")
     @PostMapping("/mbgGenerator")
-    public WrapperResponse<Boolean> mbgGenerator(@RequestBody MbgUiConfigEntity mbgUiConfigEntity) {
+    public WrapperResponse<Boolean> mbgGenerator(@RequestBody MbgUiConfigDTO mbgUiConfigDTO) {
         try {
-            Boolean flag = mbgService.mbgGenerator(mbgUiConfigEntity);
+            Boolean flag = mbgService.mbgGenerator(mbgUiConfigDTO);
             return WrapperResponse.success(flag);
-        } catch (Exception e) {
-            return WrapperResponse.success(false);
+        } catch (MyException ex) {
+            return WrapperResponse.error(1,ex.getMessage(),false);
+        }catch (Exception e) {
+            return WrapperResponse.fail(e.getMessage(),false);
+        }
+    }
+
+    @ApiOperation(value = "mbg创建文件项目路径")
+    @PostMapping("/makeDirs")
+    public WrapperResponse<Boolean> makeDirs(@RequestBody MbgUiConfigDTO mbgUiConfigDTO) {
+        try {
+            Boolean flag = mbgService.makeDirs(mbgUiConfigDTO);
+            return WrapperResponse.success(flag);
+        } catch (MyException ex) {
+            return WrapperResponse.error(1,ex.getMessage(),false);
+        }catch (Exception e) {
+            return WrapperResponse.fail(e.getMessage(),false);
         }
     }
 }

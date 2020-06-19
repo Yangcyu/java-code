@@ -4,7 +4,7 @@ import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.*;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
-import pers.ycy.javacode.mbg.config.MbgUiConfigEntity;
+import pers.ycy.javacode.mbg.config.MbgUiConfigDTO;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class MybatisGeneratorTest {
 
     public static void main(String[] args) {
         try {
-            MbgUiConfigEntity entity = new MbgUiConfigEntity();
+            MbgUiConfigDTO entity = new MbgUiConfigDTO();
 
             entity.setEntityTargetProject("src/main/java");
             entity.setEntityTargetPackage("pers.ycy.javacode.business.demo.entity");
