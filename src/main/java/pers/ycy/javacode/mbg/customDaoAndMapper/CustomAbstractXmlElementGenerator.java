@@ -42,7 +42,6 @@ public class CustomAbstractXmlElementGenerator extends AbstractXmlElementGenerat
             // 添加and
             sb.append(" and ");
             // 添加别名t
-            sb.append("t.");
             sb.append(MyBatis3FormattingUtilities.getEscapedColumnName(introspectedColumn));
             // 添加等号
             sb.append(" = ");
@@ -110,29 +109,18 @@ public class CustomAbstractXmlElementGenerator extends AbstractXmlElementGenerat
         List<IntrospectedColumn> columns = ListUtilities.removeIdentityAndGeneratedAlwaysColumns(introspectedTable.getAllColumns());
         for (int i = 0; i < columns.size(); i++) {
             IntrospectedColumn introspectedColumn = columns.get(i);
-            insertClause.append(introspectedColumn.getJavaProperty());
-            insertClause.append(" != null");
-            XmlElement insertNotNullElement = new XmlElement("if");
-            insertNotNullElement.addAttribute(new Attribute("test", insertClause.toString()));
             insertClause.setLength(0);
             insertClause.append(MyBatis3FormattingUtilities.getEscapedColumnName(introspectedColumn));
-            insertClause.append(',');
-            insertNotNullElement.addElement(new TextElement(insertClause.toString()));
-            answer.addElement(insertNotNullElement);
+            if(i<(columns.size()-1)){
+                insertClause.append(',');
+            }
+            answer.addElement(new TextElement(insertClause.toString()));
             insertClause.setLength(0);
 
-            XmlElement valuesNotNullElement = new XmlElement("if");
             sb.setLength(0);
-            sb.append("item." + introspectedColumn.getJavaProperty());
-            sb.append(" != null");
-            valuesNotNullElement.addAttribute(new Attribute(
-                    "test", sb.toString()));
-            sb.setLength(0);
-            sb.append(MyBatis3FormattingUtilities
-                    .getParameterClause(introspectedColumn, "item."));
+            sb.append(MyBatis3FormattingUtilities.getParameterClause(introspectedColumn, "item."));
             sb.append(',');
-            valuesNotNullElement.addElement(new TextElement(sb.toString()));
-            valuesTrimElement.addElement(valuesNotNullElement);
+            valuesTrimElement.addElement(new TextElement(sb.toString()));
         }
         insertClause.append(")");
         answer.addElement(new TextElement(insertClause.toString()));

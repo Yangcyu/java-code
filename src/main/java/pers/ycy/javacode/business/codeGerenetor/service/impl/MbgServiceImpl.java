@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import pers.ycy.javacode.business.codeGerenetor.service.MbgService;
 import pers.ycy.javacode.mbg.config.MbgUiConfigDTO;
 import pers.ycy.javacode.system.MyException;
+import pers.ycy.javacode.system.WrapperResponse;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class MbgServiceImpl implements MbgService {
         JDBCConnectionConfiguration jdbcConnectionConfiguration = context.getJdbcConnectionConfiguration();
         jdbcConnectionConfiguration.setDriverClass(env.getProperty("spring.datasource.driver-class-name"));
         jdbcConnectionConfiguration.setConnectionURL(env.getProperty("spring.datasource.url"));
-        jdbcConnectionConfiguration.setUserId(env.getProperty("spring.datasource.name"));
+        jdbcConnectionConfiguration.setUserId(env.getProperty("spring.datasource.username"));
         jdbcConnectionConfiguration.setPassword(env.getProperty("spring.datasource.password"));
 
         JavaModelGeneratorConfiguration modelGeneratorConfiguration = context.getJavaModelGeneratorConfiguration();
@@ -74,13 +75,13 @@ public class MbgServiceImpl implements MbgService {
         File daoFile = new File(dto.getProjectPath() + File.separator + dto.getDaoTargetProject());
         File mapperFile = new File(dto.getProjectPath() + File.separator + dto.getMapperTargetProject());
         if (!entityFile.exists()) {
-            throw new MyException(1, "文件不存在");
+            throw new MyException(WrapperResponse.WARN, "文件不存在");
         }
         if (!daoFile.exists()) {
-            throw new MyException(1, "文件不存在");
+            throw new MyException(WrapperResponse.WARN, "文件不存在");
         }
         if (!mapperFile.exists()) {
-            throw new MyException(1, "文件不存在");
+            throw new MyException(WrapperResponse.WARN, "文件不存在");
         }
     }
 

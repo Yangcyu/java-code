@@ -14,7 +14,7 @@ import pers.ycy.javacode.system.MyException;
 import pers.ycy.javacode.system.WrapperResponse;
 
 @RestController
-@Api("MBG")
+@Api(value = "MBG",tags = "MBG")
 @RequestMapping(value = "/mbg")
 public class MbgController {
 
@@ -28,8 +28,10 @@ public class MbgController {
             Boolean flag = mbgService.mbgGenerator(mbgUiConfigDTO);
             return WrapperResponse.success(flag);
         } catch (MyException ex) {
+            ex.printStackTrace();
             return WrapperResponse.error(1,ex.getMessage(),false);
         }catch (Exception e) {
+            e.printStackTrace();
             return WrapperResponse.fail(e.getMessage(),false);
         }
     }

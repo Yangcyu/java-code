@@ -23,7 +23,7 @@ public class SwaggerApp {
                 .apiInfo(apiInfo())
                 .select()
                 //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("pers.ycy.javacode.business"))
+                .apis(RequestHandlerSelectors.basePackage("pers.ycy"))
                 .paths(PathSelectors.any())
                 .build();
     }

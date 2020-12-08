@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /code
+spring:
+  application:
+    name: java-code
+  profiles:
+    include: druid
+    redis:
+      database: 0
+      host: localhost
+      port: 6379
+      jedis:
+        pool:
+          max-active: 10
+          min-idle: 0
+logging:
+  file:
+    path: /Users/yangchenyu/workspace/idea/log
+  level:
+    pers.ycy: debug
+    org.springframework: warn
+
+
+

@@ -6,6 +6,7 @@ public class WrapperResponse<T> implements Serializable {
     private static final long serialVersionUID = 5778573516446596671L;
     public static int SUCCESS = 0;
     public static int FAIL = -1;
+    public static int WARN = 1;
     public static String MSG_SUCCESS = "成功";
     public static String MSG_WARNING = "成功但有告警";
     public static String MSG_FAIL = "失败";
@@ -40,7 +41,7 @@ public class WrapperResponse<T> implements Serializable {
 
     public static <T> WrapperResponse<T> warning(int code, String message, T data) {
         message = message != null && message.length() > 0 ? message : MSG_WARNING;
-        return new WrapperResponse(code, WrapperResponse.ResponseType.TYPE_WARNING.getType(), message, data);
+        return new WrapperResponse(WARN, WrapperResponse.ResponseType.TYPE_WARNING.getType(), message, data);
     }
 
     public static <T> WrapperResponse<T> error(int code, String message, T data) {
