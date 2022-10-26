@@ -5,7 +5,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
+/**
+ * @Description: 跨域请求配置
+ * @Author: yangchenyu
+ * @Date: 2021/6/25 7:38 下午
+ */
 @Configuration
 public class GlobalCorsConfig {
     @Bean

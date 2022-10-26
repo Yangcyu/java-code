@@ -1,0 +1,17 @@
+10:08:25.098 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,1948] - {dataSource-1} closing ...
+10:08:25.109 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2020] - {dataSource-1} closed
+10:08:32.863 [main] INFO  p.y.JavaCodeApplication - [logStarting,55] - Starting JavaCodeApplication on YCY.local with PID 26260 (/Users/yangchenyu/workspace/idea/study/java-code/target/classes started by yangchenyu in /Users/yangchenyu/workspace/idea/study/java-code)
+10:08:32.871 [main] INFO  p.y.JavaCodeApplication - [logStartupProfileInfo,655] - The following profiles are active: druid,tablecompare
+10:08:35.034 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:08:35.035 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:08:35.035 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:08:35.128 [main] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:08:35.246 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:08:35.758 [main] INFO  c.a.d.p.DruidDataSource - [init,1003] - {dataSource-1} inited
+10:08:36.143 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+10:08:37.442 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+10:08:37.474 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+10:08:37.495 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+10:08:37.525 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+10:08:37.766 [main] INFO  p.y.JavaCodeApplication - [logStarted,61] - Started JavaCodeApplication in 6.092 seconds (JVM running for 8.436)
+11:19:54.118 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'

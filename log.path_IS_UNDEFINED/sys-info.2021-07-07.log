@@ -1,0 +1,68 @@
+09:18:38.097 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,1948] - {dataSource-1} closing ...
+09:18:38.102 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2020] - {dataSource-1} closed
+09:31:52.965 [main] INFO  p.y.JavaCodeApplication - [logStarting,55] - Starting JavaCodeApplication on YCY.local with PID 16735 (/Users/yangchenyu/workspace/idea/study/java-code/target/classes started by yangchenyu in /Users/yangchenyu/workspace/idea/study/java-code)
+09:31:52.968 [main] INFO  p.y.JavaCodeApplication - [logStartupProfileInfo,655] - The following profiles are active: druid
+09:31:54.975 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+09:31:54.976 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:31:54.976 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+09:31:55.055 [main] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:31:55.149 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:31:55.503 [main] INFO  c.a.d.p.DruidDataSource - [init,1003] - {dataSource-1} inited
+09:31:55.810 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+09:31:56.692 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+09:31:56.724 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+09:31:56.743 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+09:31:56.792 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+09:31:57.019 [main] INFO  p.y.JavaCodeApplication - [logStarted,61] - Started JavaCodeApplication in 4.436 seconds (JVM running for 5.356)
+09:32:02.675 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:41:14.960 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,1948] - {dataSource-1} closing ...
+10:41:14.966 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2020] - {dataSource-1} closed
+10:41:20.293 [main] INFO  p.y.JavaCodeApplication - [logStarting,55] - Starting JavaCodeApplication on YCY.local with PID 17734 (/Users/yangchenyu/workspace/idea/study/java-code/target/classes started by yangchenyu in /Users/yangchenyu/workspace/idea/study/java-code)
+10:41:20.297 [main] INFO  p.y.JavaCodeApplication - [logStartupProfileInfo,655] - The following profiles are active: druid
+10:41:21.903 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:41:21.904 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:41:21.905 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:41:21.975 [main] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:41:22.078 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:41:22.419 [main] INFO  c.a.d.p.DruidDataSource - [init,1003] - {dataSource-1} inited
+10:41:22.698 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+10:41:23.530 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+10:41:23.561 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+10:41:23.576 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+10:41:23.608 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+10:41:23.776 [main] INFO  p.y.JavaCodeApplication - [logStarted,61] - Started JavaCodeApplication in 4.012 seconds (JVM running for 4.967)
+10:41:25.873 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:43:39.678 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,1948] - {dataSource-1} closing ...
+10:43:39.684 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2020] - {dataSource-1} closed
+10:43:44.213 [main] INFO  p.y.JavaCodeApplication - [logStarting,55] - Starting JavaCodeApplication on YCY.local with PID 17772 (/Users/yangchenyu/workspace/idea/study/java-code/target/classes started by yangchenyu in /Users/yangchenyu/workspace/idea/study/java-code)
+10:43:44.221 [main] INFO  p.y.JavaCodeApplication - [logStartupProfileInfo,655] - The following profiles are active: druid
+10:43:46.106 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:43:46.107 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:43:46.107 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:43:46.187 [main] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:43:46.315 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:43:46.721 [main] INFO  c.a.d.p.DruidDataSource - [init,1003] - {dataSource-1} inited
+10:43:47.012 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+10:43:47.849 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+10:43:47.879 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+10:43:47.898 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+10:43:47.932 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+10:43:48.122 [main] INFO  p.y.JavaCodeApplication - [logStarted,61] - Started JavaCodeApplication in 4.305 seconds (JVM running for 5.19)
+10:43:49.333 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:45:09.292 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,1948] - {dataSource-1} closing ...
+10:45:09.300 [SpringContextShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2020] - {dataSource-1} closed
+10:45:14.581 [main] INFO  p.y.JavaCodeApplication - [logStarting,55] - Starting JavaCodeApplication on YCY.local with PID 17807 (/Users/yangchenyu/workspace/idea/study/java-code/target/classes started by yangchenyu in /Users/yangchenyu/workspace/idea/study/java-code)
+10:45:14.585 [main] INFO  p.y.JavaCodeApplication - [logStartupProfileInfo,655] - The following profiles are active: druid
+10:45:16.255 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+10:45:16.256 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:45:16.256 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:45:16.356 [main] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:45:16.474 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:45:16.823 [main] INFO  c.a.d.p.DruidDataSource - [init,1003] - {dataSource-1} inited
+10:45:17.133 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+10:45:18.168 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+10:45:18.209 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+10:45:18.230 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+10:45:18.272 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+10:45:18.463 [main] INFO  p.y.JavaCodeApplication - [logStarted,61] - Started JavaCodeApplication in 4.429 seconds (JVM running for 5.676)
+10:45:23.108 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/code] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'

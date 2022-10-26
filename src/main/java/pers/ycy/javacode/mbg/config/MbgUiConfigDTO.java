@@ -12,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
 public class MbgUiConfigDTO {
 
     @NotEmpty(message = "项目路径不能为空！")
-    @ApiModelProperty(value = "项目路径", example = "F:/tmp",required = true)
+    @ApiModelProperty(value = "项目路径", example = "/Users/yangchenyu/Desktop/test",required = true)
     private String projectPath;
 
     @NotEmpty(message = "entity路径不能为空！")
@@ -40,9 +40,9 @@ public class MbgUiConfigDTO {
     private String mapperTargetPackage;
 
     @NotEmpty(message = "表名不能为空！")
-    @ApiModelProperty(value = "表名", example = "clct_bill_b",required = true)
+    @ApiModelProperty(value = "表名", example = "column_info",required = true)
     private String tableName;
 
-    @ApiModelProperty(value = "文件名前缀", example = "ClctBill",required = true)
+    @ApiModelProperty(value = "文件名前缀", example = "columnInfo",required = true)
     private String domainObjectName;
 }

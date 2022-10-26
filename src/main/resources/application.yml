@@ -6,7 +6,9 @@ spring:
   application:
     name: java-code
   profiles:
-    include: druid
+    include:
+      - druid
+      - tablecompare
     redis:
       database: 0
       host: localhost
@@ -21,6 +23,7 @@ logging:
   level:
     pers.ycy: debug
     org.springframework: warn
+
 
 
 

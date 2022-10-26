@@ -1,0 +1,9 @@
+17:32:05.677 [http-nio-8080-exec-2] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：java.util.ArrayList cannot be cast to pers.ycy.javacode.system.WrapperResponse
+17:32:16.855 [http-nio-8080-exec-6] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：java.util.ArrayList cannot be cast to pers.ycy.javacode.system.WrapperResponse
+17:49:57.144 [http-nio-8080-exec-1] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:51:08.956 [http-nio-8080-exec-3] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:52:30.693 [http-nio-8080-exec-5] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:52:44.923 [http-nio-8080-exec-7] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:52:46.875 [http-nio-8080-exec-8] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:53:38.254 [http-nio-8080-exec-10] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null
+17:54:48.804 [http-nio-8080-exec-2] ERROR p.y.c.MyExceptionHandler - [exceptionHandler,66] - 发生未知异常！原因是：null

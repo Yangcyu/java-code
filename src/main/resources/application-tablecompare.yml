@@ -1,0 +1,9 @@
+table-compare:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/code?useSSL=false&characterEncoding=utf8&allowMultiQueries=true
+  username: root
+  password: root
+  driver-class-name2: com.mysql.jdbc.Driver
+  url2: jdbc:mysql://127.0.0.1:3306/code?useSSL=false&characterEncoding=utf8&allowMultiQueries=true
+  username2: root
+  password2: root

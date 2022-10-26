@@ -6,14 +6,7 @@
     <context id="mybatis" targetRuntime="MyBatis3" defaultModelType="flat">
         <!--实体类toString方法-->
         <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
-        <!--BatchInsertPlugin-->
-        <plugin type="com.itfsw.mybatis.generator.plugins.BatchInsertPlugin">
-            <!--
-            开启后可以实现官方插件根据属性是否为空决定是否插入该字段功能
-            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！插件默认不开启
-            -->
-            <property name="allowMultiQueries" value="true"/>
-        </plugin>        <!--SerializablePlugin-->
+        <!--SerializablePlugin-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <!--Lombok插件-->
         <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin"/>
@@ -38,7 +31,7 @@
 
 
         <!--生成entity类存放位置-->
-        <javaModelGenerator targetPackage="pers.ycy.javacode.business.demo.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="pers.ycy.javacode.mvc.demo.entity" targetProject="src/main/java">
             <!--<property name="enableSubPackages" value="true"/>-->
             <!--<property name="trimStrings" value="false"/>-->
         </javaModelGenerator>
@@ -49,7 +42,7 @@
         </sqlMapGenerator>
 
         <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="pers.ycy.javacode.business.demo.dao"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="pers.ycy.javacode.mvc.demo.dao"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
