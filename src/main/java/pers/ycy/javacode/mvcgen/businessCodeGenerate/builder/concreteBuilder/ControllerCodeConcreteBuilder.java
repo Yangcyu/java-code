@@ -122,9 +122,9 @@ public class ControllerCodeConcreteBuilder extends BusinessCodeBuilder {
             builder.addAnnotation(requestType);
             builder.addJavadoc(dto.getMethodDesc());
             ClassName wrapperResponse = ClassName.get("cn.hsa.hsaf.core.framework.web","WrapperResponse");
-            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo")));
-            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo"));
-            builder.addStatement("return " + StringUtils.uncapitalize(structureDTO.getBusinessName()) + "Service." + dto.getMethodName() + MethodUtils.getParameterName(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo")));
+            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto")));
+            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"));
+            builder.addStatement("return " + StringUtils.uncapitalize(structureDTO.getBusinessName()) + "Service." + dto.getMethodName() + MethodUtils.getParameterName(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto")));
             builder.addException(Exception.class);
             MethodSpec methodSpec = builder.build();
             typeSpec.addMethod(methodSpec);

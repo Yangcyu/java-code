@@ -99,9 +99,10 @@ public class ServiceImplCodeConcreteBuilder extends BusinessCodeBuilder {
             builder.addModifiers(Modifier.PUBLIC);
             builder.addJavadoc(dto.getMethodDesc());
             ClassName wrapperResponse = ClassName.get("cn.hsa.hsaf.core.framework.web","WrapperResponse");
-            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo")));
-            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo"));
-            builder.addStatement("return " + StringUtils.uncapitalize(structureDTO.getBusinessName()) + "BO." + dto.getMethodName() + MethodUtils.getParameterName(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo")));
+            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto")));
+            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"));
+            builder.addAnnotation(Override.class);
+            builder.addStatement("return WrapperResponse.success(" + StringUtils.uncapitalize(structureDTO.getBusinessName()) + "BO." + dto.getMethodName() + MethodUtils.getParameterName(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"))+")");
             builder.addException(Exception.class);
             MethodSpec methodSpec = builder.build();
             typeSpec.addMethod(methodSpec);

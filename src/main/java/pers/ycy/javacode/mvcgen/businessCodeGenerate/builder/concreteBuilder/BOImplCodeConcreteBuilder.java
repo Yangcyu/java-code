@@ -99,11 +99,11 @@ public class BOImplCodeConcreteBuilder extends BusinessCodeBuilder {
             MethodSpec.Builder builder = MethodSpec.methodBuilder(dto.getMethodName());
             builder.addModifiers(Modifier.PUBLIC);
             builder.addJavadoc(dto.getMethodDesc());
-            builder.returns(TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo"));
-            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo"));
+            builder.returns(TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto"));
+            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"));
             builder.addAnnotation(Override.class);
             builder.addException(Exception.class);
-            builder.addStatement("$T $N = null",TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo"),dto.getReturnName());
+            builder.addStatement("$T $N = null",TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto"),dto.getReturnName());
             builder.addStatement("return $N",dto.getReturnName());
             MethodSpec methodSpec = builder.build();
             typeSpec.addMethod(methodSpec);

@@ -95,8 +95,8 @@ public class BOCodeConcreteBuilder extends BusinessCodeBuilder {
             MethodSpec.Builder builder = MethodSpec.methodBuilder(dto.getMethodName());
             builder.addModifiers(Modifier.PUBLIC,Modifier.ABSTRACT);
             builder.addJavadoc(dto.getMethodDesc());
-            builder.returns(TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo"));
-            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo"));
+            builder.returns(TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto"));
+            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"));
             builder.addException(Exception.class);
             MethodSpec methodSpec = builder.build();
             typeSpec.addMethod(methodSpec);

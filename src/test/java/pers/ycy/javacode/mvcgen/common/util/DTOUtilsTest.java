@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /***
@@ -24,7 +26,13 @@ class DTOUtilsTest {
 
     @Test
     void getColumnsByTableTest() throws Exception {
-        System.out.printf(dataSource.getConnection().getCatalog());
+
+
+    }
+
+    @Test
+    void test2(){
+
     }
 
 }

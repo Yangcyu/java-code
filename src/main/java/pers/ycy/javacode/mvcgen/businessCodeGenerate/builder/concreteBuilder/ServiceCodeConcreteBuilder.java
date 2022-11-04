@@ -100,8 +100,8 @@ public class ServiceCodeConcreteBuilder extends BusinessCodeBuilder {
             builder.addModifiers(Modifier.PUBLIC,Modifier.ABSTRACT);
             builder.addJavadoc(dto.getMethodDesc());
             ClassName wrapperResponse = ClassName.get("cn.hsa.hsaf.core.framework.web","WrapperResponse");
-            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".bo")));
-            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".bo"));
+            builder.returns(ParameterizedTypeName.get(wrapperResponse, TypeNameUtils.getTypeName(dto.getReturnStr(),structureDTO.getPackagePath()+".dto")));
+            builder.addParameters(TypeNameUtils.getParameters(dto.getParameterStr(),structureDTO.getPackagePath()+".dto"));
             builder.addException(Exception.class);
             MethodSpec methodSpec = builder.build();
             typeSpec.addMethod(methodSpec);

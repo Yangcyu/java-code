@@ -89,8 +89,13 @@ public class TypeNameUtils {
             //set
             name = StringUtils.substringBetween(name, "<", ">");
             return ParameterizedTypeName.get(ClassName.get(Set.class), TypeNameUtils.getTypeByString(name, path));
+        } else if (Pattern.matches("^PageResult<[A-Za-z]*>+$", name)) {
+            //PageResult
+            name = StringUtils.substringBetween(name, "<", ">");
+            ClassName pageResult = ClassName.get("cn.hsa.hsaf.core.framework.util","PageResult");
+            return ParameterizedTypeName.get(pageResult, TypeNameUtils.getTypeByString(name, path));
         } else {
-            throw new MyException(name + " 类型错误");
+            throw new MyException(name + "类型错误");
         }
     }
 

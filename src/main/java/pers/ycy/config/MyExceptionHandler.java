@@ -34,6 +34,7 @@ public class MyExceptionHandler {
     @ResponseBody
     public WrapperResponse bizExceptionHandler(HttpServletRequest req, MyException e){
         log.error("发生业务异常！原因是：{}",e.getMessage());
+        e.printStackTrace();
         return WrapperResponse.fail(e.getMessage());
     }
 
